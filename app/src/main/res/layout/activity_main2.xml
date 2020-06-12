@@ -12,7 +12,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:background="@drawable/play_rounded_button"
         android:padding="16dp"
         android:text="@string/get_random_number"
         android:textColor="#FFFFFF"
