@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.motion.widget.MotionLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layoutDescription="@xml/motion_layout_scene">
@@ -11,13 +11,13 @@
         android:id="@+id/header_image"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="imageused"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/contentLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/img"
-        android:contentDescription="imageused" />
+        app:srcCompat="@mipmap/img" />
 
     <LinearLayout
         android:id="@+id/contentLayout"
@@ -30,11 +30,10 @@
 
         <TextView
             android:id="@+id/gdg_text"
+            style="@style/TextAppearance.Subtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/gdg_description_long"
-            style="@style/TextAppearance.Subtitle"
-            />
+            android:text="@string/gdg_description_long" />
     </LinearLayout>
 
     <LinearLayout
@@ -48,13 +47,12 @@
 
         <TextView
             android:id="@+id/title"
+            style="@style/TextAppearance.title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            style="@style/TextAppearance.title"
-            android:text="@string/who_are_gdgs"
-            android:padding="32dp"
-            android:textColor="#000000"
             android:background="@drawable/title_layout_background"
-            />
+            android:padding="32dp"
+            android:text="@string/who_are_gdgs"
+            android:textColor="#000000" />
     </LinearLayout>
 </androidx.constraintlayout.motion.widget.MotionLayout>
