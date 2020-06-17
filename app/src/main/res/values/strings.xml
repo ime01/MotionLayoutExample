@@ -17,4 +17,10 @@
     <string name="who_are_gdgs">Who are gdgs ?</string>
     <string name="get_random_number">Get Random Number</string>
     <string name="number">number</string>
+
+    <string name="red">RED</string>
+    <string name="blue">BLUE</string>
+    <string name="green">GREEN</string>
+    <string name="swipe_left_to_previous_view">Swipe left to first view</string>
+    <string name="swipe_right_to_next_view">Swipe right to second view</string>
 </resources>

@@ -1,31 +1,24 @@
 package com.flowz.motionlayoutexample;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.flowz.motionlayoutexample.example.Main2Activity;
 import com.flowz.motionlayoutexample.example.Main3Activity;
-import com.google.android.material.bottomappbar.BottomAppBar;
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.flowz.motionlayoutexample.viewpager.ViewPagerExample;
 import com.google.android.material.snackbar.Snackbar;
 
 public class MainActivity extends AppCompatActivity {
 
     ImageView pic;
     ConstraintLayout parent_layout;
-    TextView title;
+    TextView title, viewpager;
 
 
 
@@ -39,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         pic = findViewById(R.id.header_image);
         parent_layout = findViewById(R.id.parent_layout);
         title = findViewById(R.id.title);
+        viewpager = findViewById(R.id.gdg_text);
 
         Snackbar clickPic = Snackbar.make(parent_layout,"Slide down click image to open VieModel example", Snackbar.LENGTH_LONG).setAction("UNDO", new View.OnClickListener() {
             @Override
@@ -49,6 +43,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
         clickPic.show();
+
+
+        viewpager.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent openViewModelExmple = new Intent(MainActivity.this, ViewPagerExample.class);
+                startActivity(openViewModelExmple);
+            }
+        });
 
 
 
